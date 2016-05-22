@@ -34,7 +34,7 @@ unsigned int gpio_by_letter(char alpha);
 unsigned int gpio_by_pin(char pin_number);
 // Open a gpio in either "INPUT" or "OUTPUT"
 int gpio_open(unsigned int gpio_id, const char *direction);
-// Wait for an interrupt on a GPIO in INPUT mode
+// Read the value of a GPIO in INPUT mode
 int digitalRead(unsigned int gpio_id);
 // Set a GPIO in OUTPUT mode to HIGH(1) or LOW(0)
 int digitalWrite(unsigned int gpio_id, unsigned int value);

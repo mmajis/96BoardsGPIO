@@ -37,6 +37,7 @@ class GPIO(object):
 
     @staticmethod
     def gpio_id(pin_name):
+        print "Trying to get pin %s" % pin_name
         return GPIO._lib.gpio_id(pin_name)
 
     def digital_read(self, pin):
