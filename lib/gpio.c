@@ -112,7 +112,7 @@ int gpio_open(unsigned int gpio_id, const char *direction)
 
 int digitalRead(unsigned int gpio_id)
 {
-    printf("Start to read gpio %d", gpio_id)
+    printf("Start to read gpio %d", gpio_id);
 	gpio_list *ptr = gpios;
 	while(ptr) {
 		if (ptr->g->gpio == gpio_id) {
