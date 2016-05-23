@@ -3,7 +3,7 @@ import time
 
 from gpio_96boards import GPIO
 
-GPIO_A = GPIO.gpio_id('GPIO_A')
+GPIO_A = GPIO.gpio_id('GPIO-A')
 pins = (
     (GPIO_A, 'out'),
 )
