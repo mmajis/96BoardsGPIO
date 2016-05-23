@@ -37,8 +37,12 @@ class GPIO(object):
 
     @staticmethod
     def gpio_id(pin_name):
-        print "Trying to get pin %s" % pin_name
-        return GPIO._lib.gpio_id(pin_name)
+        #print "Trying to get pin %s" % pin_name
+        converted_gpio = GPIO._lib.gpio_id(pin_name)
+        #print "Got gpio %s" % translated_gpio
+        if converted_gpio == -1:
+            raise RuntimeError('Unknown pin %s' % pin_name)
+        return converted_gpio
 
     def digital_read(self, pin):
         assert type(pin) == int
